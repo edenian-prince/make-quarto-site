@@ -1,0 +1,157 @@
+/*-- scss:defaults --*/
+$theme-darkblue: #01364C;
+$theme-blue: #99D9DD;
+$theme-white: #F7F8F9;
+$theme-yellow: #F4BA02;
+
+
+
+/*-- scss:rules --*/
+.reveal div.sourceCode {
+  border: unset !important;
+}
+
+div.sourceCode {
+  background-color: unset !important;
+}
+
+@mixin background-full {
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*
+.slide.level2.present{
+  &:is(.slide-background) {
+    background-image: url('box.svg');
+    @include background-full;
+  }
+  h2 {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: 1.5em;
+  }
+  h3 {
+    color: $theme-blue;
+    text-align: center;
+    font-size: 2em;
+  }
+  ul {
+    text-align: center;
+  }
+  
+  svg text{
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+}
+*/
+
+
+
+.theme-title1 {
+  &:is(.slide-background) {
+    background-image: url('box2.svg');
+    @include background-full;
+  }
+    h2 {
+    text-align: center;
+    transform: translate(5em,5em);
+    font-size: 3em;
+  }
+  h3 {
+    color: $theme-blue;
+    text-align: center;
+    font-size: 2em;
+  }
+  svg text{
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+}
+
+
+
+
+.title{
+  position: relative;
+  width: 320px;
+  height: 100px;
+  background: $theme-blue;
+  border-radius: 100px;
+}
+
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+
+.reveal .slide a {
+  text-decoration: underline;
+}
+
+
+.container
+{
+    position: relative;
+    height: 400px;
+}
+
+.head-rect
+{
+    position: relative;
+    width: 320px;
+    height: 50px;
+    background: #fff;
+    border-style: solid;
+    border-color: $theme-darkblue;
+    border-width: 2px;
+
+}
+
+.body-rect 
+{
+    position: relative;
+    width: 320px;
+    height: 300px;
+    background: #fff;
+    border-style: solid;
+    border-color: $theme-darkblue;
+    border-width: 2px;
+}
+
+.circle
+{
+    background: #bb3804;
+    border: #181c1f;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: translate(0.5em,0.75em);
+}
+
+.circle2
+{
+    background: #F4BA02;
+    border: #181c1f;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: translate(1.5em);
+}
+
+.circle3
+{
+    background: #F4BA02;
+    border: #181c1f;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: translate(2.5em);
+}
