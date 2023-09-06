@@ -1,48 +1,31 @@
 ---
-title: "demo"
+title: "how to make a Github Page"
+title-slide-attributes: 
+  data-background-color: body-bg
+  data-background-size: contain
 format: 
   revealjs:
     theme: [default,assets/theme.scss]
 editor: visual
 ---
 
-## {.theme-title1}
+# examples
 
-## box {.theme-title1}
+:::{layout-ncol=2}
 
-
-## check
+## R
 
 ```{=html}
-<div class="container">
-        <div class="head-rect">
-            <div class="circle"></div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-        </div>
-
-        <div class="body-rect"></div>
-
-    </div>
-
+<iframe width="500" height="500" src="https://dplyr.tidyverse.org/" title="Quarto Documentation" class="myframe"></iframe>
 ```
 
-## Quarto
+## Python
 
-
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
-
-## Bullets
-
-When you click the **Render** button a document will be generated that includes:
-
--   Content authored with markdown
--   Output from executable code
-
-## Code
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
+```{=html}
+<iframe width="500" height="500" src="https://pandas.pydata.org/" title="Quarto Documentation" class="myframe"></iframe>
 ```
+
+:::
+
+
+

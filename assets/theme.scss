@@ -4,6 +4,21 @@ $theme-blue: #99D9DD;
 $theme-white: #F7F8F9;
 $theme-yellow: #F4BA02;
 
+/* potential themes */
+$light-blue: #ABBECB;
+$back-blue: #160e1d;
+$med-back-blue: #274E5A;
+$crash-blue: #88AEB3;
+$fade-blue: #BDCFD4;
+$text-blue: #DEE2E2;
+$light-back : #bdcad4;
+
+/*$body-bg: #182337;*/
+$body-bg: $light-back;
+$body-color: $back-blue;
+$link-color: $med-back-blue;
+
+
 
 
 /*-- scss:rules --*/
@@ -21,21 +36,26 @@ div.sourceCode {
   background-repeat: no-repeat;
 }
 
-/*
-.slide.level2.present{
+
+.split-light{
   &:is(.slide-background) {
-    background-image: url('box.svg');
+    background-image: url('30-70-light.svg');
     @include background-full;
+    z-index: 0;
   }
-  h2 {
-    text-anchor: middle;
-    dominant-baseline: middle;
+  h1 {
+    margin-left: -150px;
     font-size: 1.5em;
+    color: $text-blue;
+    z-index: 1;
+    background-color: #fff;
   }
-  h3 {
-    color: $theme-blue;
-    text-align: center;
+  h2, p, pre {
+    color: $text-blue;
+    margin-left: -150px;
     font-size: 2em;
+    z-index: 1;
+
   }
   ul {
     text-align: center;
@@ -46,7 +66,25 @@ div.sourceCode {
     dominant-baseline: middle;
   }
 }
-*/
+
+.slide1{
+  h1 {
+    font-size: 1.5em;
+    color: $text-blue;
+    z-index: 1;
+  }
+  h2, p, pre {
+    color: $text-blue;
+    font-size: 2em;
+    z-index: 1;
+
+  }
+  ul {
+    text-align: center;
+  }
+  
+}
+
 
 
 
@@ -71,87 +109,15 @@ div.sourceCode {
   }
 }
 
-
-
-
-.title{
-  position: relative;
-  width: 320px;
-  height: 100px;
-  background: $theme-blue;
-  border-radius: 100px;
-}
-
-.blue {
-  color: $theme-blue;
-  font-weight: bold;
-}
-
-.yellow {
-  color: $theme-yellow;
-  font-weight: bold;
-}
-
-.reveal .slide a {
-  text-decoration: underline;
+.myframe {
+  box-shadow: $back-blue 10px 5px 5px 0px;
 }
 
 
-.container
-{
-    position: relative;
-    height: 400px;
-}
 
-.head-rect
-{
-    position: relative;
-    width: 320px;
-    height: 50px;
-    background: #fff;
-    border-style: solid;
-    border-color: $theme-darkblue;
-    border-width: 2px;
 
-}
 
-.body-rect 
-{
-    position: relative;
-    width: 320px;
-    height: 300px;
-    background: #fff;
-    border-style: solid;
-    border-color: $theme-darkblue;
-    border-width: 2px;
-}
 
-.circle
-{
-    background: #bb3804;
-    border: #181c1f;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    transform: translate(0.5em,0.75em);
-}
 
-.circle2
-{
-    background: #F4BA02;
-    border: #181c1f;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    transform: translate(1.5em);
-}
 
-.circle3
-{
-    background: #F4BA02;
-    border: #181c1f;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    transform: translate(2.5em);
-}
+
