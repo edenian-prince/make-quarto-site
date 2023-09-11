@@ -68,3 +68,7 @@ body
     border-radius: 50%;
     transform: translate(2.5em,-1.1em);
 }
+
+.body-back {
+  background: #2A211C;
+}
