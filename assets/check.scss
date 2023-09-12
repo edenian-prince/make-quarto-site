@@ -1,0 +1,36 @@
+/*-- scss:defaults --*/
+$theme-white: #F7F8F9;
+$theme-yellow: #E8D4AD;
+$theme-darksand: #D0927D;
+$theme-night: #1E313D;
+$theme-ground: #416270;
+
+$body-bg: $theme-yellow !default;
+$body-color: $theme-night !default;
+
+
+
+/*-- scss:rules --*/
+
+.myframe {
+  /*box-shadow: $back-blue 10px 5px 5px 0px;*/
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px !important;
+  box-shadow: 0 20px 47px rgb(0 0 0 / 55%);
+  width: fit-content;
+  margin: auto !important;
+  
+}
+
+
+.myframe2 {
+  /*box-shadow: $back-blue 10px 5px 5px 0px;*/
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px !important;
+  box-shadow: 0 20px 47px rgb(0 0 0 / 55%);
+  /*width: fit-content;*/
+  /*margin: auto !important;*/
+}
+
