@@ -213,7 +213,7 @@ edenian-prince.github.io/quarto-site/
 
 ## 
 
-:::{.window-style}
+:::{.window-style .move-down}
 ```{r}
 #| eval: false
 #| classes: myframe
@@ -229,9 +229,9 @@ edenian-prince.github.io/quarto-site/
 ::: {layout-ncol="2"}
 ::: {.codewindow width="500px"}
 external_script.R
-
 ```{r eval=FALSE}
-#| code-line-numbers: "8,12"
+#| code-line-numbers: "8-12"
+#| classes: window-style
 # ----- Read in Libraries ----- #
 ## ---- libraries
 library(dplyr)
@@ -245,6 +245,7 @@ library(magrittr)
   as_tibble())
 ## ---- stop
 ```
+
 :::
 
 ::: {.codewindow width="500px"}
@@ -262,10 +263,10 @@ scripts/script.qmd
 
 ## github actions {background-color="aquamarine"}
 
-::: {.codewindow .sass width="500px"}
+::: {.codewindow .sass width="700px"}
 .github/workflows/quarto-publish.yml
 
-```{sass}
+```{yaml}
 #| eval: false
 on:
   workflow_dispatch:

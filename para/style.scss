@@ -18,6 +18,10 @@ $font-family-sans-serif: Inter, Helvetica, sans-serif;
 
 /*-- scss:rules --*/
 
+.move-down {
+  transform: translate(0em,5em);
+}
+
 // push the controls over the right column
 @media screen and (min-width: 500px) {
   .reveal .controls[data-controls-layout=edges] .navigate-down {
@@ -133,6 +137,11 @@ div.sourceCode.cell-code
   code span.fu {
     color: #ffa07a;
   }
+  
+  code span.do {
+    color: gold;
+    font-style: italic;
+}
   
   
 
