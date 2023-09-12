@@ -8,6 +8,7 @@ format:
     parallax-background-image: narrow.png
     parallax-background-size: "28px 6000px"
     navigation-mode: vertical
+    chalkboard: true
 revealjs-plugins:
   - codewindow
 knitr: true
@@ -16,7 +17,7 @@ echo: true
 
 # github pages
 
-by Frankthetank
+by frankthetank
 
 ## examples
 
@@ -99,9 +100,9 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 :::
 
 ::: {.column width="50%"}
-
-::: {.codewindow}
+::: codewindow
 \_quarto.yml
+
 ```{sass eval=FALSE}
 #| code-line-numbers: "6-10|"
 project:
@@ -127,15 +128,15 @@ editor: visual
 :::
 :::
 
-## nav bar
+## nav bar {.head-color}
 
 ```{=html}
 <iframe width="1000" height="500" src="https://edenian-prince.github.io/testing/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
-## add more files
+## add more files {.head-color}
 
 ::: {layout-ncol="2"}
-:::{.window-style}
+::: window-style
 ```{scss}
 #| code-line-numbers: "|6-10|11-12|13-14"
 #| eval: false
@@ -161,7 +162,7 @@ folder tree
 ```
 :::
 
-:::{.window-style}
+::: window-style
 ```{scss eval=FALSE}
 #| code-line-numbers: "7-26"
 #| classes: myframe
@@ -207,13 +208,11 @@ editor: visual
 ## nav bar results
 
 ```{=html}
-edenian-prince.github.io/quarto-site/
-<iframe width="1000" height="500" src="https://edenian-prince.github.io/quarto-site/" title="Quarto Documentation" class="myframe2"></iframe>
+<iframe width="1600" height="600" src="https://edenian-prince.github.io/quarto-site/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
-
 ## 
 
-:::{.window-style .move-down}
+::: {.window-style .move-down}
 ```{r}
 #| eval: false
 #| classes: myframe
@@ -227,8 +226,9 @@ edenian-prince.github.io/quarto-site/
 ## link external code to documentation
 
 ::: {layout-ncol="2"}
-::: {.codewindow width="500px"}
+::: {.codewindow .r width="500px"}
 external_script.R
+
 ```{r eval=FALSE}
 #| code-line-numbers: "8-12"
 #| classes: window-style
@@ -244,24 +244,49 @@ library(magrittr)
   arrange(desc(Month)) %>%
   as_tibble())
 ## ---- stop
-```
 
+# ----- Make a Plot ----- #
+## ---- make-plot
+(
+  plot <- df |>
+    ggplot() + 
+    geom_point(aes(Ozone,Temp)) +
+    facet_grid(~Month)
+)
+## ---- stop
+```
 :::
 
 ::: {.codewindow width="500px"}
 scripts/script.qmd
 
-```{r read-chunk}
-#| echo: fenced
-#
+```{r setup}
+#| eval: false
+#| code-line-numbers: "1-3,9-11"
+
+# ```{r setup}
+  knitr::read_chunk(file.path(getwd(),"external_script.R"))
+# ```
+
+# ```{r libraries}
+
+# ```
+
+# ```{r read-chunk}
+
+# ```
+
+# ```{r make-plot}
+
+# ```
 
 ```
 :::
 :::
 
-## github actions - let's automate 🍕 {background-color="aquamarine"}
+## github actions - let's automate 🍕
 
-## github actions {background-color="aquamarine"}
+## github actions
 
 ::: {.codewindow .sass width="700px"}
 .github/workflows/quarto-publish.yml
@@ -299,7 +324,7 @@ jobs:
 ```
 :::
 
-## github actions {background-color="aquamarine"}
+## github actions
 
 ![](images/Screen%20Shot%202023-09-07%20at%206.08.31%20PM.png){.myframe}
 
