@@ -14,11 +14,11 @@ editor: visual
 knitr: true
 ---
 
-#  {background-color="#bdcad4"}
+#  {background-color="aquamarine"}
 
 ![](images/Screen%20Shot%202023-09-07%20at%2010.41.36%20AM.png){style="myframe"}
 
-# examples {background-color="#bdcad4"}
+# examples {background-color="aquamarine"}
 
 ::: {layout-ncol="2"}
 ## R
@@ -33,11 +33,11 @@ knitr: true
 ```
 :::
 
-# open a quarto project {background-color="#bdcad4"}
+# open a quarto project {background-color="aquamarine"}
 
 ![](images/ezgif-5-4bfe38e796.gif){.myframe}
 
-# files {background-color="#bdcad4"}
+# files {background-color="aquamarine"}
 
 ::: columns
 ::: {.column width="50%"}
@@ -65,7 +65,7 @@ knitr: true
 :::
 :::
 
-------------------------------------------------------------------------
+# {background-color="aquamarine"}
 
 ::: columns
 ::: {.column width="50%"}
@@ -127,17 +127,17 @@ editor: visual
 :::
 :::
 
-# nav bar {background-color="#bdcad4"}
+# nav bar {background-color="aquamarine"}
 
 ```{=html}
 <iframe width="1000" height="500" src="https://edenian-prince.github.io/testing/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
-# add more files {background-color="#bdcad4"}
+# add more files {background-color="aquamarine"}
 
 ::: {layout-ncol="2"}
 ::: {.express}
 ```{scss}
-#| code-line-numbers: "|6-9|"
+#| code-line-numbers: "|6-10|11-12|13-14"
 #| eval: false
 #| classes: myframe
 folder tree
@@ -163,7 +163,7 @@ folder tree
 
 ::: {.express}
 ```{scss eval=FALSE}
-#| code-line-numbers: "5-23|"
+#| code-line-numbers: "7-26"
 #| classes: myframe
 _quarto.yml
 project:
@@ -204,27 +204,27 @@ editor: visual
 :::
 :::
 
-# idk {background-color="aquamarine"}
-
-:::{.express}
-```{r}
-#| eval: false
-#| classes: myframe
-#| code-line-numbers: "1-2|"
-mtcars |>
-  filter(color==5) %>%
-  mutate(hello=15)
-# a comment
-
-```
-:::
-# nav bar results {background-color="#bdcad4"}
+# nav bar results {background-color="aquamarine"}
 
 ```{=html}
 edenian-prince.github.io/quarto-site/
 <iframe width="1000" height="500" src="https://edenian-prince.github.io/quarto-site/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
-# link external code to documentation
+
+# {background-color="#bdcad4"}
+
+:::{.express}
+```{r}
+#| eval: false
+#| classes: myframe
+# Code chunk to document
+(df <- airquality |>
+  arrange(desc(Month)) |>
+  as_tibble())
+```
+:::
+
+# link external code to documentation {background-color="aquamarine"}
 
 ::: {layout-ncol="2"}
 ::: {.codewindow width="500px"}
@@ -258,9 +258,9 @@ scripts/script.qmd
 :::
 :::
 
-# github actions - let's automate 🍕
+# github actions - let's automate 🍕 {background-color="aquamarine"}
 
-# github actions
+# github actions {background-color="aquamarine"}
 
 ::: {.codewindow .sass width="500px"}
 .github/workflows/quarto-publish.yml
@@ -298,11 +298,11 @@ jobs:
 ```
 :::
 
-# github actions
+# github actions {background-color="aquamarine"}
 
 ![](images/Screen%20Shot%202023-09-07%20at%206.08.31%20PM.png){.myframe}
 
-# scss/css/sass
+# scss/css/sass {background-color="aquamarine"}
 
 ::: {.codewindow .sass width="500px"}
 styles.scss
@@ -343,82 +343,12 @@ $light-back : #bdcad4;
 ```
 :::
 
-# html
+# html {background-color="aquamarine"}
 
 ```{r}
 #| eval: false
 <iframe width="500" height="500" src="https://dplyr.tidyverse.org/" title="Quarto Documentation" class="myframe"></iframe>
 ```
 
-# js
+# js {background-color="aquamarine"}
 
-# add more files
-
-::: columns
-::: {.column width="30%"}
-```{sass}
-#| code-line-numbers: "|6-9|"
-#| eval: false
-#| classes: express
-folder tree
-.
-├── _quarto.yml
-├── about.qmd
-├── fancy-site-doc.Rproj
-├── home
-│   ├── how_to.qmd
-│   ├── link_code.qmd
-│   └── renv.qmd
-├── index.qmd
-├── plots
-│   └── plot1.qmd
-├── scripts
-│   └── script.qmd
-├── styles.css
-└── styles.scss
-
-4 directories, 11 files
-```
-:::
-
-::: {.column width="70%"}
-```{sass eval=FALSE}
-#| code-line-numbers: "5-23|"
-_quarto.yml
-project:
-  type: website
-
-website:
-  title: "fancy-site-doc"
-  navbar:
-    left:
-      - text: Home
-        menu: 
-          - href: index.qmd
-            text: "0: Intro"
-          - href: home/how_to.qmd
-            text: "1: How to create this doc"
-          - href: home/link_code.qmd
-            text: "2: How to link code to doc"
-          - href: home/renv.qmd
-            text: "3: Virtual Environments"
-      - text: Scripts
-        menu:
-          - href: scripts/script.qmd
-            text: "0: my script"
-      - text: Plots
-        menu: 
-          - href: plots/plot1.qmd
-            text: "0: my plot"
-
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    scss: styles.scss
-    toc: true
-
-editor: visual
-```
-:::
-:::

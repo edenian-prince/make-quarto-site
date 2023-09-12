@@ -16,7 +16,7 @@ knitr: true
 
 # with espresso highlighting {background-color="aquamarine"}
 
-:::{.express}
+::: express
 ```{r}
 #| eval: false
 #| classes: myframe
@@ -40,5 +40,3 @@ mtcars |>
 # a comment
 
 ```
-
-
